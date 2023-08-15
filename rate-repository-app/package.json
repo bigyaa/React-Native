@@ -1,10 +1,6 @@
 {
   "name": "rate-repository-app",
   "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
-  "babel": {
-    "presets": "babel-preset-expo"
-  },
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -25,6 +21,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/eslint-parser": "^7.22.10",
+    "babel-preset-react-native": "^4.0.1",
     "eslint": "^8.46.0",
     "eslint-plugin-react": "^7.33.1",
     "eslint-plugin-react-native": "^4.0.0"
