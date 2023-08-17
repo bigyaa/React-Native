@@ -1,10 +1,23 @@
-import { View, Text } from "react-native";
+import { useState } from 'react';
+import { View, Text, ScrollView, SafeAreaView } from "react-native";
+import { Stack, useRouter } from "expo-router";
+import { Popularjobs, Nearbyjobs, Welcome } from "../components"
 
-const Home= ()=>{
+const Home = () => {
     return (
-        <View>
-            <Text>Home</Text>
-        </View>
+        // <View>
+        //     <Text>Home</Text>
+        // </View>
+        <SafeAreaView>
+            <Stack.Screen />
+            <ScrollView>
+                <View>
+                    <Welcome />
+                    <Popularjobs />
+                    <Nearbyjobs />
+                </View>
+            </ScrollView>
+        </SafeAreaView>
     )
 }
 
