@@ -9,7 +9,7 @@ const Home = () => {
         // <View>
         //     <Text>Home</Text>
         // </View>
-        <SafeAreaView>
+        <SafeAreaView style={{flex:1, backgroundColor:COLORS.white}}>
             <Stack.Screen
                 options={{
                     headerStyle: { backgroundColor: COLORS.lightWhite },
