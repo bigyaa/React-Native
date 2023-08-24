@@ -9,7 +9,7 @@ const Home = () => {
         // <View>
         //     <Text>Home</Text>
         // </View>
-        <SafeAreaView style={{flex:1, backgroundColor:COLORS.white}}>
+        <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
             <Stack.Screen
                 options={{
                     headerStyle: { backgroundColor: COLORS.lightWhite },
@@ -22,12 +22,12 @@ const Home = () => {
                     ),
                     headerTitle: "",
                 }} />
-            <ScrollView showsVerticalScrollIndicator={false}> 
+            <ScrollView showsVerticalScrollIndicator={false}>
                 <View
-                style={{
-                    flex: 1,
-                    padding: SIZES.medium,
-                }}>
+                    style={{
+                        flex: 1,
+                        padding: SIZES.medium,
+                    }}>
                     <Welcome />
                     <Popularjobs />
                     <Nearbyjobs />

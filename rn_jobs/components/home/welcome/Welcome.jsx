@@ -1,9 +1,9 @@
 import React from 'react'
-import { View, Text, TextInput, Image, FlatList, TouchableOpacity } from 'react-native'
+import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native'
 
-import styles from './welcome.style'
-import { icons, SIZES } from '../../../constants'
 import { useRouter } from 'expo-router'
+import { icons } from '../../../constants'
+import styles from './welcome.style'
 
 const Welcome = () => {
   const router = useRouter();
