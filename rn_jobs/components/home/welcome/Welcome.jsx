@@ -4,9 +4,11 @@ import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { useRouter } from 'expo-router'
 import { icons } from '../../../constants'
 import styles from './welcome.style'
+import { FlatList } from 'react-native-web'
 
 const Welcome = () => {
   const router = useRouter();
+  const jobTypes = ['full-time', 'part-time', 'contractor']
 
   return (
     <View>
@@ -26,7 +28,20 @@ const Welcome = () => {
             style={styles.searchBtnImage} />
         </TouchableOpacity>
       </View>
-    </View>
+
+      <View style={styles.tabsContainer}>
+        <FlatList data={jobTypes} renderItem={({ item }) =>
+        (
+          <TouchableOpacity style={styles.tab(ActiveJobTypes, item)} onPress={() => {
+            setActiveJobType(item);
+            router.push('/search/${item}');
+          }} >
+            <Text style={styles.tabText(ActiveJobType, item)}>{item}</Text>
+          </TouchableOpacity> />
+        )}
+        />
+      </View>
+    </View >
   )
 }
 
