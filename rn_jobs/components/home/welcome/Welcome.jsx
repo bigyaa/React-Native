@@ -2,7 +2,7 @@ import React from 'react'
 import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native'
 
 import { useRouter } from 'expo-router'
-import { icons } from '../../../constants'
+import { icons, SIZES } from '../../../constants'
 import styles from './welcome.style'
 import { FlatList } from 'react-native-web'
 
@@ -38,7 +38,7 @@ const Welcome = () => {
               router.push('/search/${item}');
             }} >
             <Text style={styles.tabText(ActiveJobType, item)}>{item}</Text>
-          </TouchableOpacity> />
+          </TouchableOpacity>
         )}
           keyExtractor={(item) => item}
           contentContainerStyle={{ columnGap: SIZES.small }}
