@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native'
 
 import { useRouter } from 'expo-router'
@@ -9,6 +9,7 @@ import { FlatList } from 'react-native-web'
 const Welcome = () => {
   const router = useRouter();
   const jobTypes = ['full-time', 'part-time', 'contractor']
+  const [activeJobType, setActiveJobType] = useState('full-time')
 
   return (
     <View>
@@ -32,12 +33,12 @@ const Welcome = () => {
       <View style={styles.tabsContainer}>
         <FlatList data={jobTypes} renderItem={({ item }) =>
         (
-          <TouchableOpacity style={styles.tab(ActiveJobTypes, item)}
+          <TouchableOpacity style={styles.tab(activeJobType, item)}
             onPress={() => {
               setActiveJobType(item);
               router.push('/search/${item}');
             }} >
-            <Text style={styles.tabText(ActiveJobType, item)}>{item}</Text>
+            <Text style={styles.tabText(activeJobType, item)}>{item}</Text>
           </TouchableOpacity>
         )}
           keyExtractor={(item) => item}
