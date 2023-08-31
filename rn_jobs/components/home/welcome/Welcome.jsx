@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native'
 
 import { useRouter } from 'expo-router'
+import { FlatList } from 'react-native-web'
 import { icons, SIZES } from '../../../constants'
 import styles from './welcome.style'
-import { FlatList } from 'react-native-web'
 
 const Welcome = () => {
   const router = useRouter();
